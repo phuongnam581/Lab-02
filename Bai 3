@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+void menu(){
+	cout << "---------Menu------------" << endl;
+	cout << "1.Cong" << endl;
+	cout << "2.Tru" << endl;
+	cout << "3.Nhan" << endl;
+	cout << "4.Chia" << endl;
+	cout << "5.Thoat" << endl;
+}
+float phepCong(int a,int b){
+	float cong = a + b;
+	cout << a << "+" << b << "=";
+	return cong;
+}
+float phepTru(int a,int b){
+	cout << a << "-" << b << "=";
+	float tru = a - b;
+	return tru;
+}
+float phepNhan(int a,int b){
+	cout << a << "*" << b << "=";
+	float nhan = a * b;
+	return nhan;
+}
+float phepChia(int a,int b){
+	cout << a << "/" << b << "=";
+	float chia = float(a )/ float(b);
+	return chia;
+}
+int main(){
+	int a,b,luaChon;
+	float cong,tru,nhan,chia;
+	cout << "Nhap so thu 1:" << endl;
+	cin>> a;
+	cout << "Nhap so thu 2:" << endl;
+	cin >> b;
+	cout << endl;
+	menu();
+	cout << endl << "Vui long nhap lua chon:";
+	cin >> luaChon;
+	do{
+			if(luaChon == 1){
+				cong = phepCong(a,b);
+				cout << cong << endl;
+				menu();
+				cout << endl << "Vui long nhap lua chon:";
+				cin >> luaChon;
+			}
+			if(luaChon == 2){
+					tru = phepTru(a,b);
+					cout << tru << endl;
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+			}
+			if(luaChon == 3){
+					nhan = phepNhan(a,b);
+					cout << nhan <<endl;
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+			}
+			if(luaChon== 4){		
+					chia = phepChia(a,b);
+					cout << chia << endl;
+					menu();
+					cout << endl << "Vui long nhap lua chon:";
+					cin >> luaChon;
+		   }
+		   if(luaChon >=5){
+		   	return 0;
+		   }	
+	}while(luaChon != 1 || luaChon != 2 || luaChon != 3 || luaChon !=4);
+}

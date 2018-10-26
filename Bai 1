@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+struct dienthoai{
+	int maVung,traoDoi,so;
+};
+int main(){
+	struct dienthoai so1,so2;
+	cout << "Nhap ma vung cua so dien thoai thu 1:" << endl;
+	cin >> so1.maVung;
+	cout << "Nhap ma trao doi cua so dien thoai thu 1:" << endl;
+	cin >> so1.traoDoi;
+	cout << "Nhap so  cua so dien thoai thu 1:" << endl;
+	cin >> so1.so;
+	cout << "So dien thoai cua ban:" << endl;
+	cout << "(" << so1.maVung << ")" << so1.traoDoi << "-" << so1.so << endl;
+	cout << "Nhap ma vung cua so dien thoai thu 2:" << endl;
+	cin >> so2.maVung;
+	cout << "Nhap ma trao doi cua so dien thoai thu 2:" << endl;
+	cin >> so2.traoDoi;
+	cout << "Nhap so  cua so dien thoai thu 2:" << endl;
+	cin >> so2.so;
+	cout << "So dien thoai cua ban:" << endl;
+	cout << "(" << so2.maVung << ")" << so2.traoDoi << "-" << so2.so << endl;
+}

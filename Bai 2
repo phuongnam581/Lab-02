@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+float tienLai(int goc,float laiSuat){
+	int tien = goc + (goc*(laiSuat/100));
+	return tien;
+}
+int main(){
+	int nam,goc;
+	float laiSuat;
+	cout << "Nhap so tien lon hon 0" << endl;
+	cin >> goc;
+	cout << "Nhap lai suat duong:" << endl;
+	cin >> laiSuat;
+	cout << "Nhap so nam lon hon 0:" << endl;
+	cin>> nam;
+	float tien = tienLai(goc,laiSuat);
+	cout << "Tien Sau Nam Thu 1:" << tien <<endl;
+	for(int i = 1;i < nam;i++){
+	tien = tienLai(tien,laiSuat);
+	cout << "Tien Sau Nam Thu " << i+1 <<":"<< tien <<endl;
+	}
+}
